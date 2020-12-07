@@ -10,7 +10,7 @@ var myMap = L.map("map", {
   });
   
   // Adding a tile layer (the background map image) to the map
-  // Used the addTo method to add objects to our map
+  // Used the addTo method to add objects to the map
   L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
     attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
     maxZoom: 18,
@@ -79,7 +79,7 @@ var link = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_month.
           var div = L.DomUtil.create('div', 'info legend'),
           grades = [0, 1,2,3,4,5],
           labels = [];
-          // loop through our density intervals and generate a label with a colored square for each interval
+          // loop through the density intervals and generate a label with a colored square for each interval
           for (var i = 0; i < grades.length; i++) {
             div.innerHTML +=
             '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
