@@ -4,17 +4,17 @@ const API_KEY = "pk.eyJ1IjoiZXJlc2RpdmluYSIsImEiOiJja2hwa2w4OWMwMHVsMnJvOGE3ZDIx
 // Creating initial map object
 // Set the longitude, latitude, and the starting zoom level
 // This gets inserted into the div with an id of 'map'
-var myMap = L.map("map", {
+var myMap = L.map("mapid", {
     center: [45.52, -122.67],
-    zoom: 2
+    zoom: 5
   });
   
   // Adding a tile layer (the background map image) to the map
   // Used the addTo method to add objects to the map
-  L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
+  L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
     attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
     maxZoom: 18,
-    id: "mapbox.streets",
+    id: "streets-v11",
     accessToken: API_KEY
   }).addTo(myMap);
 
